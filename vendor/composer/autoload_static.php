@@ -4,24 +4,10 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit88983d8de97d0545e7d33542f3dd3fd0
+class ComposerStaticInit165c59807776bbc0576716f3c6b55acc
 {
-    public static $prefixLengthsPsr4 = array (
-        'P' => 
-        array (
-            'PHPMailer\\PHPMailer\\' => 20,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'PHPMailer\\PHPMailer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
-        ),
-    );
-
     public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/TiagoS12/php-classes/src',
+        0 => __DIR__ . '/..' . '/hcodebr/php-classes/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -43,16 +29,22 @@ class ComposerStaticInit88983d8de97d0545e7d33542f3dd3fd0
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'EasyPeasyICS' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/EasyPeasyICS.php',
+        'PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
+        'PHPMailerOAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauth.php',
+        'PHPMailerOAuthGoogle' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauthgoogle.php',
+        'POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.pop3.php',
+        'SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.smtp.php',
+        'ntlm_sasl_client_class' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
+        'phpmailerException' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit88983d8de97d0545e7d33542f3dd3fd0::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit88983d8de97d0545e7d33542f3dd3fd0::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit88983d8de97d0545e7d33542f3dd3fd0::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit88983d8de97d0545e7d33542f3dd3fd0::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit88983d8de97d0545e7d33542f3dd3fd0::$classMap;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit165c59807776bbc0576716f3c6b55acc::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit165c59807776bbc0576716f3c6b55acc::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit165c59807776bbc0576716f3c6b55acc::$classMap;
 
         }, null, ClassLoader::class);
     }
